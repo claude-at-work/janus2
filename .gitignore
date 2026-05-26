@@ -1,0 +1,24 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+
+# Runtime data — lives in ~/.janus2/, not in repo
+*.faiss
+*.npy
+narrate_state.json
+context.json
+scratch.json
+
+# Large training artifacts — port explicitly when needed
+ortable/data/embedding_cache.jsonl
+ortable/data/training_pairs.json
+ortable/data/conversations_*.jsonl
+ortable/data/old_corpus/
+
+# Weights ship separately
+*.json.broken_backup
