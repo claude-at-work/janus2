@@ -1,0 +1,13 @@
+{
+  "_note": "Tyler's natural transition language. Edit freely. These get inserted at joints between sentence cuts.",
+  "_link_to_type": "Each key maps to a link MLP type. 'default' fires when link type is unknown.",
+
+  "extension":  ["And from there—", "Which means—", "So—", "It also seems...", "Essentially..."],
+  "contrast":   ["And yet—", "But underneath that,", "Well...", "Against that,", "But—"],
+  "analogy":    ["Same shape:", "Which is to say,", "Essentially...", "Like—", "It's the same as—"],
+  "resolution": ["Until:", "The turn:", "And then—", "Well...", "So essentially—"],
+  "metaphor":   ["The image:", "Picture it:", "In other words,", "It's like—", "Essentially..."],
+  "symbol":     ["It keeps returning to:", "The mark of it:", "And that becomes—"],
+  "context":    ["Because—", "Right, so—", "The thing is—", "It also seems...", "Well—"],
+  "default":    ["Well...", "Essentially...", "And—", "So—", "It also seems..."]
+}

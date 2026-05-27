@@ -20,6 +20,7 @@ from pathlib import Path
 
 import numpy as np
 
+from janus.config import JANUS_HOME
 from janus.narrate_state import (
     NarrateState, TrajectorySignature,
     load_state, save_state, is_priming,
@@ -28,10 +29,9 @@ from janus.narrate_state import (
 )
 
 # ─── Paths ────────────────────────────────────────────────────────
-_JANUS_HOME = Path.home() / ".janus"
-_INDEX_DIR = _JANUS_HOME / "index"
-_WEIGHTS_DIR = _JANUS_HOME / "weights"
-_LOGS_DIR = _JANUS_HOME / "logs"
+_INDEX_DIR = JANUS_HOME / "index"
+_WEIGHTS_DIR = JANUS_HOME / "weights"
+_LOGS_DIR = JANUS_HOME / "logs"
 
 _GRAPH_PATH = _INDEX_DIR / "symlink_index.json"
 _ENTRY_EMB_PATH = _INDEX_DIR / "entry_embeddings.npy"
@@ -335,7 +335,6 @@ def _recall_from_graph(query: str, k: int = 3) -> list[dict]:
 
     return results[: k * 2]
 
-JANUS_HOME = Path.home() / ".janus"
 CONTEXT_FILE = JANUS_HOME / "context.json"
 SESSIONS_DIR = JANUS_HOME / "sessions"
 MAX_ROLLING_TURNS = 50       # turns kept in L2 rolling journal

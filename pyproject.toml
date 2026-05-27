@@ -12,17 +12,20 @@ dependencies = [
     "rich>=13.0",
     "pyyaml>=6.0",
     "requests>=2.28",
-    "faiss-cpu>=1.7",
+    "faiss-cpu>=1.7",  # satisfied by vendor/faiss-cpu shim on Android/aarch64
     "numpy>=1.24",
-    "mcp>=1.1.0",
     "prompt-toolkit>=3.0",
-    "anthropic>=0.86.0",
+    # anthropic SDK not needed — Anthropic backend uses direct urllib HTTP calls
+    # mcp not needed — see optional[mcp] below
 ]
 
 [project.optional-dependencies]
 dev = [
     "pytest>=7.0",
     "pytest-mock>=3.10",
+]
+mcp = [
+    "mcp>=1.1.0",  # requires pydantic-core (Rust) — not available on Android/aarch64
 ]
 
 [project.scripts]

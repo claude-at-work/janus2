@@ -19,6 +19,11 @@ ANTHROPIC_AGENT_MODEL = os.environ.get("ANTHROPIC_AGENT_MODEL", "claude-haiku-4-
 OLLAMA_HOST  = os.environ.get("OLLAMA_HOST", "http://localhost:11434")
 OLLAMA_MODEL = os.environ.get("JANUS_MODEL", "gemma4:31b-cloud")
 
+# ─── Data home ───────────────────────────────────────────────────
+# JANUS_HOME: where live data (graph, weights, context, logs) lives.
+# Default: ~/.janus2/  (not ~/.janus/ — this is the JANUS 2 fork)
+JANUS_HOME = Path(os.environ.get("JANUS_HOME", str(Path.home() / ".janus2")))
+
 # ─── Sandbox ─────────────────────────────────────────────────────
 # Default to Termux home, not the old Kali chroot path
 SANDBOX_DIR = os.environ.get(

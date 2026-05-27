@@ -15,11 +15,12 @@ from pathlib import Path
 
 import numpy as np
 
+from janus.config import JANUS_HOME
+
 PHI = (1.0 + math.sqrt(5.0)) / 2.0
 PHI_INV = 1.0 / PHI
 
-_JANUS_HOME = Path.home() / ".janus"
-_STATE_PATH = _JANUS_HOME / "narrate_state.json"
+_STATE_PATH = JANUS_HOME / "narrate_state.json"
 _MAX_STACK = 8
 
 
